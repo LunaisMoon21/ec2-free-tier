@@ -9,7 +9,7 @@ variable "instance-type" {
   description = "EC2 Instance type"
 
   type    = string
-  default = "t3.mirco"
+  default = "t3.medium"
 }
 
 variable "ami-name" {
