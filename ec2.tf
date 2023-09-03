@@ -3,11 +3,12 @@ resource "aws_instance" "ec2" {
   instance_type = "t3.micro"
 
   root_block_device {
-    encrypted = true
+    encrypted   = var.root-block.encrypted
+    volume_type = var.root-block.volume-type
   }
 
   metadata_options {
-    http_tokens = "required"
+    http_tokens = var.metadata.http-tokens
   }
   tags = {
     Name = "HelloWorld"
