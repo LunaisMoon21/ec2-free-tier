@@ -77,7 +77,7 @@ variable "metadata" {
 
   type = map(string)
   default = {
-    http-endpoint               = "true"
+    http-endpoint               = "enabled"
     http-tokens                 = "required"
     http-put-response-hop-limit = "1"
   }

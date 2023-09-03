@@ -33,7 +33,7 @@ No modules.
 | <a name="input_instance-name"></a> [instance-name](#input\_instance-name) | name of instance | `string` | `null` | no |
 | <a name="input_instance-type"></a> [instance-type](#input\_instance-type) | EC2 Instance type | `string` | `"t3.mirco"` | no |
 | <a name="input_key-pair"></a> [key-pair](#input\_key-pair) | Add Key Pair to access instance | `string` | `null` | no |
-| <a name="input_metadata"></a> [metadata](#input\_metadata) | Setting up metadata options for instance | `map(string)` | <pre>{<br>  "http-endpoint": "true",<br>  "http-put-response-hop-limit": "1",<br>  "http-tokens": "required"<br>}</pre> | no |
+| <a name="input_metadata"></a> [metadata](#input\_metadata) | Setting up metadata options for instance | `map(string)` | <pre>{<br>  "http-endpoint": "enabled",<br>  "http-put-response-hop-limit": "1",<br>  "http-tokens": "required"<br>}</pre> | no |
 | <a name="input_private-ip"></a> [private-ip](#input\_private-ip) | Choose private IP to assign to instance | `string` | `null` | no |
 | <a name="input_root-block"></a> [root-block](#input\_root-block) | Setup root block device outside of standard | `map(string)` | <pre>{<br>  "encrypted": "true",<br>  "volume-szie": "20",<br>  "volume-type": "gp3"<br>}</pre> | no |
 | <a name="input_security-groups"></a> [security-groups](#input\_security-groups) | List of Security groups to add to ec2 | `list(string)` | `[]` | no |
