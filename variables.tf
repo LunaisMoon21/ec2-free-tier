@@ -1,3 +1,10 @@
+variable "instance-name" {
+  description = "name of instance"
+
+  type    = string
+  default = null
+}
+
 variable "instance-type" {
   description = "EC2 Instance type"
 
