@@ -25,7 +25,7 @@ generate "backend" {
 terraform {
   backend "s3" {
     bucket         = "lunatest21"
-    key            = "${path_relative_to_include()}/terraform.tfstate"
+    key            = "${get_env("ENV0_ENVIRONMENT_ID", "test")}/terraform.tfstate"
     region         = "us-east-2"
     encrypt        = true
     dynamodb_table = "my-lock-table"
