@@ -4,7 +4,7 @@
 # Note the extra `/` after the protocol is required for the shorthand
 # notation.
 terraform {
-  source = "./modules"
+  source = "./"
 }
 
 # Indicate what region to deploy the resources into
