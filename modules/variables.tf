@@ -79,6 +79,6 @@ variable "metadata" {
   default = {
     http-endpoint               = "enabled"
     http-tokens                 = "required"
-    http-put-response-hop-limit = "1"
+    http-put-response-hop-limit = "2"
   }
 }
