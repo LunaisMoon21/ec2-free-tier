@@ -16,4 +16,21 @@ provider "aws" {
   region = "us-east-2"
 }
 EOF
+
+}
+
+generate "backend" {
+  path      = "backend.tf"
+  if_exists = "overwrite_terragrunt"
+  contents = <<EOF
+terraform {
+  backend "s3" {
+    bucket         = "lunatest21"
+    key            = "${get_env("ENV0_ENVIRONMENT_ID", "test")}/terraform.tfstate"
+    region         = "us-east-2"
+    encrypt        = true
+    dynamodb_table = "my-lock-table"
+  }
+}
+EOF
 }
