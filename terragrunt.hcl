@@ -24,7 +24,7 @@ generate "backend" {
   contents = <<EOF
 terraform {
   backend "s3" {
-    bucket         = "my-terraform-state"
+    bucket         = "Lunatest21"
     key            = "${path_relative_to_include()}/terraform.tfstate"
     region         = "us-east-2"
     encrypt        = true
